@@ -27,4 +27,20 @@ h1 {
     
 }
 
+.movie-card {
+    box-sizing: content-box;
+    width: 400px;
+    padding: 200px;
+    text-align: right;
+}
 
+.restaurant-card {
+    box-sizing: content-box;
+    width: 400px;
+    padding: 200px;
+
+}
+
+.user-input {
+    text-align: center;
+}
