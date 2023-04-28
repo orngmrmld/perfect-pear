@@ -13,9 +13,10 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    background-color: rgb(106, 106, 120)!important;
+    /* background-color: rgb(106, 106, 120)!important; - was just using this background to see the section and to adjust the cards, but in the end best to remove it for aesthetics*/ 
 }
 
+/* still need to figure out how to move the movie card more to the left, (in the works) */
 .movie-card {
     margin-left: -50px;
     background-color: green;
