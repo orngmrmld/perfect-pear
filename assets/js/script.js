@@ -23,3 +23,20 @@ function initMap() {
       map: map
     });
   }
+
+
+  //submit button 
+  var zipCodeInput = document.querySelector("#zipcode");
+  var submitButton = document.querySelector("#submit");
+
+  var zip = localStorage.getItem("zip");
+
+  submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  
+    zip = document.querySelector("#zipcode").value;
+    localStorage.setItem("zip", zip);
+
+    document.querySelector("#zipcode").value = "";
+
+  });
