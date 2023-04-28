@@ -9,3 +9,4 @@
 // Grab info on restaurant 
 // Use google maps api to find nearest location of restaurant
 // Randomizer
+// Update restaurant card

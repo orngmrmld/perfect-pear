@@ -21,10 +21,25 @@ header {
 
 
 h1 {
-    
     color: aqua;
     text-align: center;
-    
+}
+
+.movie-card {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    justify-content: right;
+}
+
+.movie-info {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
 }
 
 
