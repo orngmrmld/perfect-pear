@@ -1,13 +1,27 @@
-/** 
+/*
 CSS
 Alignment
 Styling
 Flex Properties
 Button Styling
 charlie brace
-**/
+
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    font-weight: bold;
+    float: center;
+    justify-content: center;
+}
+*/
+
 h1 {
-    color: aqua;
+    color: aqua; 
 }
 
 main {
@@ -16,22 +30,18 @@ main {
     /* background-color: rgb(106, 106, 120)!important; - was just using this background to see the section and to adjust the cards, but in the end best to remove it for aesthetics*/ 
 }
 
-/* still need to figure out how to move the movie card more to the left, (in the works) */
 .movie-card {
-    margin-left: -50px;
+    margin-left: -250px;
     background-color: green;
     text-align: center;
-    width: 50%;
     height: 400px;
 }
 
 .restaurant-card {
     background-color: rgb(139, 222, 139);
     text-align: center;
-    width: 50%;
     height: 400px;
 }
-
 
 .user-input {
     text-align: center;

@@ -10,6 +10,21 @@
 // Use google maps api to find nearest location of restaurant
 // Randomizer
 
+
+var mapArea = document.querySelector(".mapArea"); //What is this for? 
+
+function initMap() {
+    var center = {lat: 51.507351, lng: -0.127758};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: center
+    });
+    var marker = new google.maps.Marker({
+      position: center,
+      map: map
+    });
+  }
+// filter randomizer function
 function filters() {
   let filterBtn = $(".filterBtn");
   filterBtn.on("click", function(event) {
@@ -19,15 +34,18 @@ function filters() {
 }
 filters();
 
+  //submit button 
+  var zipCodeInput = document.querySelector("#zipcode");
+  var submitButton = document.querySelector("#submit");
 
-function initMap() {
-  var center = {lat: 51.507351, lng: -0.127758};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: center
+  var zip = localStorage.getItem("zip");
+
+  submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  
+    zip = document.querySelector("#zipcode").value;
+    localStorage.setItem("zip", zip);
+
+    document.querySelector("#zipcode").value = "";
+
   });
-  var marker = new google.maps.Marker({
-    position: center,
-    map: map
-  });
-}
