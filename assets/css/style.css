@@ -44,3 +44,9 @@ h1 {
 .user-input {
     text-align: center;
 }
+
+#map {
+    height: 200px;
+    width: 100%;
+    background-color: grey;
+  }
