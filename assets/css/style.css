@@ -30,7 +30,6 @@ body {
     background-color: rgb(12, 31, 14)!important;
 }
 
-
 h1 {
     color: aqua; 
     text-align: center;
@@ -40,6 +39,9 @@ h3 {
     color: rgb(240, 132, 132);
 }
 
+h4 {
+    color: rgba(248, 86, 5, 0.535);
+}
 
 main {
     display: flex;
@@ -48,16 +50,18 @@ main {
 }
 
 .movie-card {
-    background-color: green;
+    background-color: rgba(83, 84, 96, 0.422);
     text-align: center;
     height: 300px;
     margin-left: -110px;
+    border-radius: 15px;
 }
 
 .restaurant-card {
-    background-color: rgb(139, 222, 139);
+    background-color: rgba(128, 233, 207, 0.265);
     text-align: center;
     height: 300px;
+    border-radius: 15px;
 }
 
 .user-input {
@@ -68,5 +72,4 @@ main {
     height: 400px;
     width: 100%;
     background-color: grey;
-   
   }

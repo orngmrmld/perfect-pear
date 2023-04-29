@@ -29,17 +29,18 @@ var randomBtn = $(".randomBtn");
 var cozyBtn = $(".cozyBtn");
 var adventureBtn = $(".adventureBtn");
 
+// RANDOM filter click functions
 randomBtn.on("click", function(event) {
   event.preventDefault();
   localStorage.setItem("filter", "random");
 });
-
-cozyBtn.on("click", function(event) {
+// COZY filter click function
+$(".cozyBtn").on("click", function(event) {
   event.preventDefault();
   localStorage.setItem("filter", "cozy");
 });
-
-adventureBtn.on("click", function(event) {
+// ADVENTURE filter click function
+$(".adventureBtn").on("click", function(event) {
   event.preventDefault();
   localStorage.setItem("filter", "adventure");
 });
