@@ -24,17 +24,25 @@ function initMap() {
       map: map
     });
   }
-// filter randomizer function
-function filters() {
-  let filterBtn = $(".filterBtn");
-  filterBtn.on("click", function(event) {
-      event.preventDefault();
-      alert("hello world"); // just using this alert as a placeholder for the actual function we will be creating
-  });
-}
-filters();
 
- 
+var randomBtn = $(".randomBtn");
+var cozyBtn = $(".cozyBtn");
+var adventureBtn = $(".adventureBtn");
+
+randomBtn.on("click", function(event) {
+  event.preventDefault();
+  localStorage.setItem("filter", "random");
+});
+
+cozyBtn.on("click", function(event) {
+  event.preventDefault();
+  localStorage.setItem("filter", "cozy");
+});
+
+adventureBtn.on("click", function(event) {
+  event.preventDefault();
+  localStorage.setItem("filter", "adventure");
+});
 
   //submit button 
   var zipCodeInput = document.querySelector("#zipcode");

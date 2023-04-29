@@ -44,7 +44,7 @@ h3 {
 main {
     display: flex;
     flex-direction: column;
-    background-color: rgb(18, 36, 11)!important; - was just using this background to see the section and to adjust the cards, but in the end best to remove it for aesthetics*/ 
+    /* background-color: rgb(18, 36, 11)!important; /*- was just using this background to see the section and to adjust the cards, but in the end best to remove it for aesthetics*/ 
 }
 
 .movie-card {
