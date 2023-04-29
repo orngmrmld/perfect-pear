@@ -11,7 +11,7 @@
 // Randomizer
 
 
-var mapArea = document.querySelector(".mapArea"); //What is this for? 
+var infocard = document.querySelector(".info-card"); //What is this for? 
 
 function initMap() {
     var center = {lat: 51.507351, lng: -0.127758};
@@ -33,6 +33,8 @@ function filters() {
   });
 }
 filters();
+
+ 
 
   //submit button 
   var zipCodeInput = document.querySelector("#zipcode");
