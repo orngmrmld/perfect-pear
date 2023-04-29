@@ -24,13 +24,14 @@ function initMap() {
       map: map
     });
   }
-
+/*
 var randomBtn = $(".randomBtn");
 var cozyBtn = $(".cozyBtn");
-var adventureBtn = $(".adventureBtn");
+var adventureBtn = $(".adventureBtn");  
+*/
 
 // RANDOM filter click functions
-randomBtn.on("click", function(event) {
+$(".randomBtn").on("click", function(event) {
   event.preventDefault();
   localStorage.setItem("filter", "random");
 });
@@ -48,7 +49,6 @@ $(".adventureBtn").on("click", function(event) {
   //submit button 
   var zipCodeInput = document.querySelector("#zipcode");
   var submitButton = document.querySelector("#submit");
-
   var zip = localStorage.getItem("zip");
 
   submitButton.addEventListener("click", function(event) {
