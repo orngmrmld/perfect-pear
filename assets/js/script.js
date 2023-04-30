@@ -11,8 +11,6 @@
 // Randomizer
 
 
-var infocard = document.querySelector(".info-card"); //What is this for? 
-
 function initMap() {
     var center = {lat: 51.507351, lng: -0.127758};
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -24,11 +22,13 @@ function initMap() {
       map: map
     });
   }
-/*
+
+
+
 var randomBtn = $(".randomBtn");
 var cozyBtn = $(".cozyBtn");
 var adventureBtn = $(".adventureBtn");  
-*/
+
 
 // RANDOM filter click functions
 $(".randomBtn").on("click", function(event) {
@@ -45,7 +45,8 @@ $(".adventureBtn").on("click", function(event) {
   event.preventDefault();
   localStorage.setItem("filter", "adventure");
 });
-
+  var infocard = document.querySelector(".info-card"); 
+  
   //submit button 
   var zipCodeInput = document.querySelector("#zipcode");
   var submitButton = document.querySelector("#submit");
