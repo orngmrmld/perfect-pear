@@ -25,6 +25,7 @@ function initMap() {
 
 
 
+
 var randomBtn = $(".randomBtn");
 var cozyBtn = $(".cozyBtn");
 var adventureBtn = $(".adventureBtn");  
@@ -50,6 +51,7 @@ $(".adventureBtn").on("click", function(event) {
   //submit button 
   var zipCodeInput = document.querySelector("#zipcode");
   var submitButton = document.querySelector("#submit");
+
   var zip = localStorage.getItem("zip");
 
   submitButton.addEventListener("click", function(event) {
