@@ -1,12 +1,12 @@
-/** 
+/*
 CSS
 Alignment
 Styling
 Flex Properties
 Button Styling
 charlie brace
-**/
-* {
+
+ * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -18,27 +18,49 @@ header {
     float: center;
     justify-content: center;
 }
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+body {
+    background-color: rgb(12, 31, 14)!important;
+}
 
 h1 {
-    
-    color: aqua;
+    color: aqua; 
     text-align: center;
-    
+}
+
+h3 {
+    color: rgb(240, 132, 132);
+}
+
+h4 {
+    color: rgba(248, 86, 5, 0.535);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(18, 36, 11)!important; /*- was just using this background to see the section and to adjust the cards, but in the end best to remove it for aesthetics*/ 
 }
 
 .movie-card {
-    box-sizing: content-box;
-    width: 400px;
-    padding: 200px;
-    text-align: right;
+    background-color: rgba(83, 84, 96, 0.422);
+    text-align: center;
+    height: 300px;
+    margin-left: -120px;
+    border-radius: 15px;
 }
 
 .restaurant-card {
-    box-sizing: content-box;
-    width: 400px;
-    padding: 200px;
-
+    background-color: rgba(128, 233, 207, 0.265);
+    text-align: center;
+    height: 300px;
+    border-radius: 15px;
 }
 
 .user-input {
@@ -46,7 +68,52 @@ h1 {
 }
 
 #map {
-    height: 200px;
+    height: 400px;
     width: 100%;
     background-color: grey;
   }
+
+  form {
+    background: lightgray;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    width: 300px;
+    margin: auto;
+}
+
+form input {
+    display: block;
+    background: none;
+    margin: 18px auto;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+    width: 180px;
+    font-size: 22px;
+    border-radius: 10px;
+    color: blue;
+}
+
+form input[type = "submit"]{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    background: rgb(245, 195, 13);
+    color: black;
+    margin: auto;
+}
+
+h5 {
+    color: black;
+    font-size: 22px;
+    font-weight: 600px;
+}
+
+#msg
+{
+  margin-top: 15px;
+  font-size: 10px;
+  color: black;
+}

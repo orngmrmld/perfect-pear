@@ -1,61 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfect Pear</title>  
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">--> 
- 
+    <title>Perfect Pear</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>   
-    <header>
-        <div class = 'div'>
-        <h1 class = 'title'>Perfect Pear</h1>
+<body>
+    <div>
+        <h1 class="has-text-centered">PERFECT PEAR!</h1>
         <!--short description//call to action-->
-        <h2 class = 'subtitle'>Perfect Pear allows you and your significant other to choose a movie and food without having to make any decisions!</h2>
+        <h4 class="has-text-centered">Perfect Pear allows you and your significant other to choose a movie and food
+            without having to make any decisions!</h4>
+    </div>
+
+    <main>
+        <!--zipcode input-->
+        <form id="user-input">
+            <h5>Enter Zip Code Below</h5>
+            <input type="text" placeholder="Ex: 94606" id="zipCode" maxlength="5" onKeyUp="validateInput()" required>
+            <input type="submit" button id="submit" value="submit">
+            <div id="msg"></div>
+        </form>
+
+        <div>
+            <h3 class="zipDisplay has-text-centered"></h3>
         </div>
-    </header>
 
-    <!--movie card-->
-    <div class = "movie-card">
-        <p class = "alert" > Movie Card </p>
-    </div>
+        <!--filter buttons-->
+        <div class="filters">
+            <h4 class="has-text-centered">Please pick a mood selector or the random button!
+            </h4>
+        </div>
+        <div class="filters card-footer m-5 ">
+            <button class="randomBtn m-5 card-footer-item">Random</button>
+            <button class="cozyBtn m-5 card-footer-item">Cozy</button>
+            <button class="adventureBtn m-5 card-footer-item">Adventure</button>
+        </div>
 
+        <!--movie card-->
+        <section class="container movie-card box column is-12 card-column">
+            <h3>MOVIE CARD</h3>
+        </section>
 
-
-    <!--restaurant card-->
-    <div class = "restaurant-card">Restaurant Card</div>
+        <!--restaurant card-->
+        <div class="box column is-offset-2 is-12 card-column restaurant-card">
+            <h3>RESTAURANT</h3>
+        </div>
     
-    <div class="user-input" >
-        <input type="text" name="zipcode" id="zipcode" placeholder="enter zipcode here">
-        <!--submit button-->
-        <button id="aaa">Submit</button>
+        <!--filter buttons-->
+        <div class="card-footer">
+            <button class="button randomBtn m-5 card-footer-item">Random</button>
+            <button class="button cozyBtn m-5 card-footer-item">Cozy</button>
+            <button class="button adventureBtn m-5 card-footer-item">Adventure</button>
+        </div>
+
+        <!--zipcode input-->
+        <div class="user-input">
+            <input type="text" name="zipcode" id="zipcode" placeholder="enter zipcode here">
+            <!--submit button-->
+            <button id="submit">Submit</button>
+        </div>
+
+    </main>
+
+    <div>
+        <h4 class="has-text-centered">MAP or DIRECTIONS:</h4>
     </div>
-
-
-
-    <!--filter buttons-->
-    <button class = "button random" id="SUBMIT">RANDOM</button>
-    <button class = "button cozy">COZY</button>
-    <button class = "button adventure">ADVENTURE</button>
-
-    <!--info card-->
-    <div class = "info-card">Info Card</div>
-
     <!-- Google Map with markers -->
     <div id="map"></div>
-    <script type="text/javascript" src="script.js"></script>
+
+    <footer>
+        <ul>
+            <li>Made by marc.us</li>
+            var marc.us = {
+            marcus.val();
+            eric.val();
+            gustavo.val();
+            sarah.val();
+            jenni.val();
+            }
+        </ul>
+    </footer>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+    <script type="text/javascript" src="assets/js/script.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWd0SDHqXoPB_KzjvvzsTQZBdflIX5Xtk&callback=initMap">
-        </script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWd0SDHqXoPB_KzjvvzsTQZBdflIX5Xtk&callback=initMap"></script>
+
 
 </body>
 
-<script src="assets/js/script.js"></script>
-
 </html>
-
