@@ -23,13 +23,13 @@
         <!--zipcode input-->
         <form id="user-input">
             <h5>Enter Zip Code Below</h5>
-            <input type="text" placeholder="Ex: 94606" id="zipCode" maxlength="5" onKeyUp="validateInput()" required>
+            <input type="text" placeholder="Ex: 94606" id="zipCode" maxlength="5" onKeyUp="validateInput()">
             <input type="submit" button id="submit" value="submit">
             <div id="msg"></div>
         </form>
 
-        <div>
-            <h3 class="zipDisplay has-text-centered"></h3>
+        <div class="columns">
+            <h3 class=" column zipDisplay has-text-centered mgb-medium"></h3>
         </div>
 
         <!--filter buttons-->
@@ -38,27 +38,24 @@
             </h4>
         </div>
         <div class="filters card-footer m-5 ">
-            <button class="randomBtn m-5 card-footer-item">Random</button>
-            <button class="cozyBtn m-5 card-footer-item">Cozy</button>
-            <button class="adventureBtn m-5 card-footer-item">Adventure</button>
+            <button class="randomBtn m-5 card-footer-item">Press to pick a movie</button>
+            <!-- <button class="cozyBtn m-5 card-footer-item">Cozy</button> -->
+            <!-- <button class="adventureBtn m-5 card-footer-item">Adventure</button> -->
         </div>
 
         <!--movie card-->
-        <section class="container movie-card box column is-12 card-column">
-            <h3>MOVIE CARD</h3>
-            <img src="${moviePoster}" alt="${movieTitle} poster">
-            <h3>${movieTitle}</h3>
-            <p>Rating: ${movieRating}</p>
+        <section class="container movie-card box columns is-12 card-column">
+            <h3 class="has-text-centered column">Movie Card</h3>
         </section>
 
-        <!--restaurant card-->
+        <!--restaurant card
         <div class="box column is-offset-2 is-12 card-column restaurant-card">
             <h3>RESTAURANT</h3>
-        </div>
+        </div> -->
 
     </main>
 
-    <div>
+    <div class="pt-5">
         <h4 class="has-text-centered">MAP or DIRECTIONS:</h4>
     </div>
     <!-- Google Map with markers -->

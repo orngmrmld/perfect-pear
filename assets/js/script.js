@@ -6,7 +6,8 @@ const movieIDs = ["tt0076759", "tt0080684", "tt0086190", "tt2488496", "tt0120915
 const movieCard = document.querySelector(".movie-card");
 
 //hide the movie filters until zipcode is entered
-$(".filters").hide()
+$(".filters").hide();
+$(".hide").hide();
 
 //initiates the map on webpage
 function initMap() {
@@ -23,6 +24,7 @@ function initMap() {
 
 //zipcode submit button saves to local storage and shows filter buttons, or displays error message
 $("#submit").on("click", function (event) {
+  event.preventDefault();
   let zip = $("#zipCode").val();
   localStorage.setItem("zip", zip);
 
@@ -32,7 +34,7 @@ $("#submit").on("click", function (event) {
     $(".zipDisplay").text("Zipcode: " + zip);
     $(".filters").show()
   } else {
-    $(".zipDisplay").text("");
+    $(".zipDisplay").text("Sorry, please enter a zipcode");
     $(".filters").hide();
   }
 });
@@ -69,12 +71,21 @@ async function generateRandomMovie() {
   const moviePoster = `${posterAPI}&i=${randomID}`;
   // Create movie card HTML
   const movieCardHTML = `
-    <img src="${moviePoster}" alt="${movieTitle} poster">
-    <h3>${movieTitle}</h3>
-    <p>Rating: ${movieRating}</p>
+  <div class="columns is-flex">
+  <img class="column hide bd-notification is-info hide bd-notification is-info " src="${moviePoster}" alt="${movieTitle} poster">
+      <div class="columns is-mobile">
+        <div class="column">
+        <h3 class="hide ">${movieTitle}</h3>
+        <div class="column">
+        <h4 class="hide bd-notification is-info">Rating: ${movieRating}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
   `;
   // Update movie card with HTML
   movieCard.innerHTML = movieCardHTML;
+  $(".hide").show();
 }
 //function for the movie cozy generator here?
 
@@ -131,6 +142,19 @@ submitButton.addEventListener("click", function(event) {
   }
 
 });
+   <div class="hide columns">
+      <img class="hide has-background-grey light" src="${moviePoster}" alt="${movieTitle} poster">
+        <div class="column">
+            <h3 class="hide has-background-grey light">${movieTitle}</h3>
+        <div class="columns is-mobile">
+            <h4 class="hide has-background-grey light">Rating: ${movieRating}</h4>
+        </div>
+    </div>
+
+   <img src="${moviePoster}" alt="${movieTitle} poster">
+    <h3>${movieTitle}</h3>
+    <p>Rating: ${movieRating}</p>
+
 */
 
 

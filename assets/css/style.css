@@ -26,7 +26,7 @@ header {
 }
 
 body {
-    background-color: rgb(12, 31, 14)!important;
+    background-color: rgb(4, 9, 4)!important;
 }
 
 h1 {
@@ -39,7 +39,7 @@ h3 {
 }
 
 h4 {
-    color: rgba(248, 86, 5, 0.535);
+    color: rgba(243, 245, 176, 0.939);
 }
 
 main {
@@ -52,7 +52,7 @@ main {
     background-color: rgba(83, 84, 96, 0.422);
     text-align: center;
     height: 300px;
-    margin-left: -120px;
+    /* margin-left: -120px; */
     border-radius: 15px;
 }
 
