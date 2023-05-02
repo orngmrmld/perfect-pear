@@ -1,3 +1,10 @@
+const posterAPI = "http://img.omdbapi.com/?apikey=84310bbd&";
+const movieAPI = "http://www.omdbapi.com/?apikey=84310bbd&i=";
+const apiKey = "84310bbd";
+const movieIDs = ["tt0076759", "tt0080684", "tt0086190", "tt2488496", "tt0120915", "tt0121766", "tt0121765", "tt3748528", "tt2527336", "tt2527338"];
+// Get HTML elements
+const movieCard = document.querySelector(".movie-card");
+
 //hide the movie filters until zipcode is entered
 $(".filters").hide()
 
@@ -16,10 +23,10 @@ function initMap() {
 
 //zipcode submit button saves to local storage and shows filter buttons, or displays error message
 $("#submit").on("click", function (event) {
-  let zip = $("#zipcode").val();
+  let zip = $("#zipCode").val();
   localStorage.setItem("zip", zip);
 
-  $("#zipcode").val("");
+  $("#zipCode").val("");
 
   if (zip) {
     $(".zipDisplay").text("Zipcode: " + zip);
@@ -28,32 +35,27 @@ $("#submit").on("click", function (event) {
     $(".zipDisplay").text("Sorry, please enter a zipcode!" + zip);
     $(".filters").hide();
   }
-})
+});
 
+function isUSAZipCode(str) 
+{
+  return /^\d{5}(-\d{4})?$/.test(str);
+}
+
+function validateInput() 
+{
+  console.log("validateInput");
+  let zipCode = document.getElementById("zipCode").value;
+  let message = "";
+  if (isUSAZipCode(zipCode)) 
+  {
+    message = "Valid Zip Code";
+  } else {
+    message = "Invalid Zip Code";
+  }
+  document.getElementById("msg").innerHTML = message;
+}
 //function for the movie random generator
-/*function getRandomMovie(event) {
-  // Generate a random movie ID
-  event.preventDefault();
-  var randomID = Math.floor(Math.random() * 100);
-  console.log(randomID)
-  // Make a request to the OMDB API with the random ID
-  fetch('http://www.omdbapi.com/?i=tt' + randomID + '&apikey=84310bbd')
-    .then(response => response.json())
-    .then(data => {
-      // Extract the movie information we need
-      var movieName = data.Title;
-      var movieRating = data.imdbRating;
-      var moviePoster = data.Poster;
-      // Display the movie information on the HTML page
-      var movieInfoDiv = document.querySelector('.movie-card');
-      movieInfoDiv.innerHTML = `
-        <h2>${movieName}</h2>
-        <p>Rating: ${movieRating}</p>
-        <img src="${moviePoster}">
-      `;
-    })
-    .catch(error => console.log(error));
-}*/
 
 //function for the movie cozy generator here?
 
@@ -67,7 +69,7 @@ $("#submit").on("click", function (event) {
 $(".randomBtn").on("click", function (event) {
   event.preventDefault();
   localStorage.setItem("filter", "random");
-  //getRandomMovie();
+  generateRandomMovie();
   //restaurantRandom():
 })
 // Generator for cozy filter click functions, pairs with random restaurant locator
@@ -87,6 +89,26 @@ $(".adventureBtn").on("click", function (event) {
   //restaurantRandom():
 });
 
+// Define function to generate random movie
+async function generateRandomMovie() {
+  // Generate random movie ID from the provided movie IDs
+  const randomID = movieIDs[Math.floor(Math.random() * movieIDs.length)];
+  // Fetch movie details from API
+  const movieResponse =  await fetch(`${movieAPI}${randomID}`);
+  const movieData = await movieResponse.json();
+  // Get movie title, rating and poster
+  const movieTitle = movieData.Title;
+  const movieRating = movieData.imdbRating;
+  const moviePoster = `${posterAPI}&i=${randomID}`;
+  // Create movie card HTML
+  const movieCardHTML = `
+    <img src="${moviePoster}" alt="${movieTitle} poster">
+    <h3>${movieTitle}</h3>
+    <p>Rating: ${movieRating}</p>
+  `;
+  // Update movie card with HTML
+  movieCard.innerHTML = movieCardHTML;
+}
 
 /*  non jquery code for submit button 
 var zipCodeInput = document.querySelector("#zipcode");

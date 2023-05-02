@@ -21,13 +21,12 @@
 
     <main>
         <!--zipcode input-->
-        <div class="user-input">
-            <h4 class="has-text-centered">Please enter your zipcode!
-            </h4>
-            <input type="text" name="zipcode" id="zipcode" placeholder="enter zipcode here">
-            <!--submit button-->
-            <button id="submit">Submit</button>
-        </div>
+        <form id="user-input">
+            <h5>Enter Zip Code Below</h5>
+            <input type="text" placeholder="Ex: 94606" id="zipCode" maxlength="5" onKeyUp="validateInput()" required>
+            <input type="submit" button id="submit" value="submit">
+            <div id="msg"></div>
+        </form>
 
         <div>
             <h3 class="zipDisplay has-text-centered"></h3>
@@ -45,13 +44,13 @@
         </div>
 
         <!--movie card-->
-        <div class="box column is-12 card-column movie-card">
-            <h3 id="movie">MOVIE CARD</h3>
+        <div class="movie-card box column is-12 card-column">
+            <h3>MOVIE CARD</h3>
         </div>
 
         <!--restaurant card-->
         <div class="box column is-offset-2 is-12 card-column restaurant-card">
-            <h3 id="food">RESTAURANT CARD</h3>
+            <h3>RESTAURANT CARD</h3>
         </div>
 
     </main>
@@ -66,16 +65,16 @@
         <ul>
             <li>Made by marc.us</li>
             var marc.us = {
-                marcus.val();
-                eric.val();
-                gustavo.val();
-                sarah.val();
-                jenni.val();
+            marcus.val();
+            eric.val();
+            gustavo.val();
+            sarah.val();
+            jenni.val();
             }
         </ul>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWd0SDHqXoPB_KzjvvzsTQZBdflIX5Xtk&callback=initMap"></script>

@@ -72,3 +72,48 @@ main {
     width: 100%;
     background-color: grey;
   }
+
+  form {
+    background: lightgray;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    width: 300px;
+    margin: auto;
+}
+
+form input {
+    display: block;
+    background: none;
+    margin: 18px auto;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+    width: 180px;
+    font-size: 22px;
+    border-radius: 10px;
+    color: blue;
+}
+
+form input[type = "submit"]{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    background: rgb(245, 195, 13);
+    color: black;
+    margin: auto;
+}
+
+h5 {
+    color: black;
+    font-size: 22px;
+    font-weight: 600px;
+}
+
+#msg
+{
+  margin-top: 15px;
+  font-size: 10px;
+  color: black;
+}
