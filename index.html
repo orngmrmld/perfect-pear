@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Pear</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -46,25 +46,14 @@
         <!--movie card-->
         <section class="container movie-card box column is-12 card-column">
             <h3>MOVIE CARD</h3>
+            <img src="${moviePoster}" alt="${movieTitle} poster">
+            <h3>${movieTitle}</h3>
+            <p>Rating: ${movieRating}</p>
         </section>
 
         <!--restaurant card-->
         <div class="box column is-offset-2 is-12 card-column restaurant-card">
             <h3>RESTAURANT</h3>
-        </div>
-    
-        <!--filter buttons-->
-        <div class="card-footer">
-            <button class="button randomBtn m-5 card-footer-item">Random</button>
-            <button class="button cozyBtn m-5 card-footer-item">Cozy</button>
-            <button class="button adventureBtn m-5 card-footer-item">Adventure</button>
-        </div>
-
-        <!--zipcode input-->
-        <div class="user-input">
-            <input type="text" name="zipcode" id="zipcode" placeholder="enter zipcode here">
-            <!--submit button-->
-            <button id="submit">Submit</button>
         </div>
 
     </main>
