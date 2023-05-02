@@ -34,7 +34,6 @@ $("#submit").on("click", function (event) {
   } else {
     $(".zipDisplay").text("");
     $(".filters").hide();
-    movieCard.hide();
   }
 });
 
