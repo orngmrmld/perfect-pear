@@ -32,8 +32,9 @@ $("#submit").on("click", function (event) {
     $(".zipDisplay").text("Zipcode: " + zip);
     $(".filters").show()
   } else {
-    $(".zipDisplay").text("Sorry, please enter a zipcode!" + zip);
+    $(".zipDisplay").text("");
     $(".filters").hide();
+    movieCard.hide();
   }
 });
 
@@ -56,7 +57,26 @@ function validateInput()
   document.getElementById("msg").innerHTML = message;
 }
 //function for the movie random generator
-
+// Define function to generate random movie
+async function generateRandomMovie() {
+  // Generate random movie ID from the provided movie IDs
+  const randomID = movieIDs[Math.floor(Math.random() * movieIDs.length)];
+  // Fetch movie details from API
+  const movieResponse =  await fetch(`${movieAPI}${randomID}`);
+  const movieData = await movieResponse.json();
+  // Get movie title, rating and poster
+  const movieTitle = movieData.Title;
+  const movieRating = movieData.imdbRating;
+  const moviePoster = `${posterAPI}&i=${randomID}`;
+  // Create movie card HTML
+  const movieCardHTML = `
+    <img src="${moviePoster}" alt="${movieTitle} poster">
+    <h3>${movieTitle}</h3>
+    <p>Rating: ${movieRating}</p>
+  `;
+  // Update movie card with HTML
+  movieCard.innerHTML = movieCardHTML;
+}
 //function for the movie cozy generator here?
 
 //function for the movie adventure generator here?
@@ -88,27 +108,6 @@ $(".adventureBtn").on("click", function (event) {
   //getRandomMovie();
   //restaurantRandom():
 });
-
-// Define function to generate random movie
-async function generateRandomMovie() {
-  // Generate random movie ID from the provided movie IDs
-  const randomID = movieIDs[Math.floor(Math.random() * movieIDs.length)];
-  // Fetch movie details from API
-  const movieResponse =  await fetch(`${movieAPI}${randomID}`);
-  const movieData = await movieResponse.json();
-  // Get movie title, rating and poster
-  const movieTitle = movieData.Title;
-  const movieRating = movieData.imdbRating;
-  const moviePoster = `${posterAPI}&i=${randomID}`;
-  // Create movie card HTML
-  const movieCardHTML = `
-    <img src="${moviePoster}" alt="${movieTitle} poster">
-    <h3>${movieTitle}</h3>
-    <p>Rating: ${movieRating}</p>
-  `;
-  // Update movie card with HTML
-  movieCard.innerHTML = movieCardHTML;
-}
 
 /*  non jquery code for submit button 
 var zipCodeInput = document.querySelector("#zipcode");
