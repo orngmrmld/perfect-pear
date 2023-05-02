@@ -27,11 +27,23 @@ header {
 
 body {
     background-color: rgb(4, 9, 4)!important;
+    
+    
 }
 
+.darker-span {
+    filter: brightness(50%);
+  }
+
 h1 {
-    color: aqua; 
+    display: flex;
+    justify-content: center;
+    font-size: 69px;;
+    background-color: rgba(0, 255, 255, 0.751);
+    color: rgb(7, 36, 36); 
     text-align: center;
+    font-family: 'Bruno Ace SC', sans-serif;
+    margin-top: 10px;
 }
 
 h3 {
@@ -39,7 +51,8 @@ h3 {
 }
 
 h4 {
-    color: rgba(243, 245, 176, 0.939);
+    color: white(243, 245, 176, 0.939);
+    font-weight: 900;
 }
 
 main {

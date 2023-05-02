@@ -72,7 +72,7 @@ async function generateRandomMovie() {
   // Create movie card HTML
   const movieCardHTML = `
   <div class="columns is-flex">
-  <img class="column hide bd-notification is-info hide bd-notification is-info " src="${moviePoster}" alt="${movieTitle} poster">
+  <img class="image is-70x70 column hide bd-notification is-info hide bd-notification is-info " src="${moviePoster}" alt="${movieTitle} poster">
       <div class="columns is-mobile">
         <div class="column">
         <h3 class="hide ">${movieTitle}</h3>
