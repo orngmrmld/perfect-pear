@@ -30,6 +30,7 @@ h4 {
     font-weight: 900;
     border-radius: 10px;
     backdrop-filter: blur(2px);
+
 }
 
 main {
@@ -128,13 +129,6 @@ h5 {
 
 
 .zipDisplay {
-    filter: brightness(150%);
-    backdrop-filter: blur(1px);
-}
-
-
-.zipDisplay {
-    filter: brightness(150%);
     backdrop-filter: blur(1px);
 }
 
