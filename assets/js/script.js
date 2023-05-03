@@ -37,7 +37,6 @@ $("#submit").on("click", function (event) {
   } else {
     $(".zipDisplay").text("Sorry, please enter a zipcode");
     $(".filters").hide();
-    $(".hideZip").show();
   }
 });
 
@@ -98,6 +97,7 @@ $(".randomBtn").on("click", function (event) {
   localStorage.setItem("filter", "random");
   generateRandomMovie();
   $(".randomBtn").text("Press to pick another movie!");
+  $(".hideComment").hide();
   //restaurantRandom():
 })
 

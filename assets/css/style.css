@@ -1,4 +1,8 @@
-header {
+body {
+    height: 100%;
+}
+
+    header {
     position: fixed;
     width: 100%;
 }
