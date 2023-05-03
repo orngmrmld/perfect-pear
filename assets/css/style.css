@@ -1,61 +1,24 @@
-/*
-CSS
-Alignment
-Styling
-Flex Properties
-Button Styling
-charlie brace
-
- * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 header {
-    display: flex;
-    font-weight: bold;
-    float: center;
-    justify-content: center;
-}
-*/
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    /* background-color: rgb(4, 9, 4)!important; */
-    /* filter: brightness(50%);  */
-    /* background: url('assets/images/MoviePosterBackground.jpg') */
-    /* figure out how to just add this to the background image */
-}
-
-header {
-  position: fixed;
-  width: 100%;
+    position: fixed;
+    width: 100%;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    font-size: 69px;;
-    /* background-color: rgba(0, 255, 255, 0.416); */
-    color: rgb(0, 255, 255); 
+    font-size: 69px;
+    color: rgb(0, 255, 255);
     border-radius: 10px;
     backdrop-filter: blur(2px);
     text-align: center;
     font-family: 'Bruno Ace SC', sans-serif;
-    position: fixed;  
+    position: fixed;
 }
-
 
 h3 {
     color: rgb(64, 66, 22);
     font-weight: bold;
-    
 }
 
 h4 {
@@ -63,22 +26,19 @@ h4 {
     font-weight: 900;
     border-radius: 10px;
     backdrop-filter: blur(2px);
-    /* background-color: rgba(24, 24, 24, 0.817); */
-    
 }
 
 main {
     display: flex;
     flex-direction: column;
-
 }
 
 .material-symbols-rounded {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 
@@ -105,9 +65,9 @@ main {
     height: 400px;
     width: 100%;
     background-color: grey;
-  }
+}
 
-  form {
+form {
     background: lightgray;
     padding: 15px;
     text-align: center;
@@ -130,7 +90,7 @@ form input {
     color: blue;
 }
 
-form input[type = "submit"]{
+form input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     font-weight: 800;
@@ -145,19 +105,18 @@ h5 {
     font-weight: 600px;
 }
 
-#msg
-{
-  margin-top: 15px;
-  font-size: 10px;
-  color: black;
+#msg {
+    margin-top: 15px;
+    font-size: 10px;
+    color: black;
 }
 
 #backgroundIMG {
-    background-image: url("../images/MoviePosterBackground.jpg"); 
+    background-image: url("../images/MoviePosterBackground.jpg");
     background-size: cover;
     position: relative;
     /* filter: brightness(50%);  */
-    }
+}
 
 .content {
     position: relative;
@@ -183,9 +142,8 @@ h5 {
     opacity: 0.75;
     width: 100%;
     height: 100%;
-} 
+}
 
 footer {
-    /* background-color: beige; */
     margin: 10px;
 }

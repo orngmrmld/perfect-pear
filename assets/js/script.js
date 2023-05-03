@@ -1,15 +1,3 @@
-// JS
-// Grab movies to choose from
-// Grab google info of that movie
-// Use google info to say where to watch (theater or stream)
-// Movie card information 
-// Use google maps api to find nearest location of theater
-// Update Movie card
-// Grab restaurants to choose from
-// Grab info on restaurant 
-// Use google maps api to find nearest location of restaurant
-// Randomizer
-
 const posterAPI = "http://img.omdbapi.com/?apikey=84310bbd&";
 const movieAPI = "http://www.omdbapi.com/?apikey=84310bbd&i=";
 const apiKey = "84310bbd";
@@ -93,7 +81,7 @@ async function generateRandomMovie() {
         <h3 class="hide ">${movieTitle}</h3>
         <h4 class="hide bd-notification is-info">Rating: ${movieRating}</h4>
         </div>
-        <div class="column is-flex"> //using img as a place holder for food random pick
+        <div class="column is-flex"> 
         <img class="image is-69x69 column hide bd-notification is-info hide bd-notification is-info" src="${moviePoster}" alt="${movieTitle} poster">
         </div>
       </div>
@@ -103,13 +91,6 @@ async function generateRandomMovie() {
   movieCard.innerHTML = movieCardHTML;
   $(".hide").show();
 }
-//function for the movie cozy generator here?
-
-//function for the movie adventure generator here?
-
-//function for random restaurant based off zipcode entered.
-/*function restaurantRandom() {
-}*/
 
 // Generator for random filter click functions, pairs with random restaurant locator
 $(".randomBtn").on("click", function (event) {
@@ -119,45 +100,41 @@ $(".randomBtn").on("click", function (event) {
   $(".randomBtn").text("Press to pick another movie!");
   //restaurantRandom():
 })
+
+
+
+
+
 // Generator for cozy filter click functions, pairs with random restaurant locator
-
-$(".cozyBtn").on("click", function (event) {
-  event.preventDefault();
-  localStorage.setItem("filter", "cozy");
-  //getRandomMovie();
-  //restaurantRandom():
-})
-// Generator for adventure filter click functions, pairs with random restaurant locator
-
-$(".adventureBtn").on("click", function (event) {
-  event.preventDefault();
-  localStorage.setItem("filter", "adventure");
-  //getRandomMovie();
-  //restaurantRandom():
-});
-
+// $(".cozyBtn").on("click", function (event) {
+//   event.preventDefault();
+//   localStorage.setItem("filter", "cozy");
+//   //getRandomMovie();
+//   //restaurantRandom():
+// })
+// // Generator for adventure filter click functions, pairs with random restaurant locator
+// $(".adventureBtn").on("click", function (event) {
+//   event.preventDefault();
+//   localStorage.setItem("filter", "adventure");
+//   //getRandomMovie();
+//   //restaurantRandom():
+// });
 /*  non jquery code for submit button 
 var zipCodeInput = document.querySelector("#zipcode");
 var submitButton = document.querySelector("#submit");
 var zipStored = localStorage.getItem("zip");
 var zipDisplay = document.querySelector(".zipDisplay"); 
 var filterStored = localStorage.getItem("filter");
-
 submitButton.addEventListener("click", function(event) {
   event.preventDefault();
-  filter = 
-  
   zip = document.querySelector("#zipcode").value;
   localStorage.setItem("zip", zip);
-
   document.querySelector("#zipcode").value = "";
-
   if (zip) {
     $(".zipDisplay").text("Zipcode: " + zip);
   } else {
     $(".zipDisplay").text("Error " + zip);
   }
-
 });
    <div class="hide columns">
       <img class="hide has-background-grey light" src="${moviePoster}" alt="${movieTitle} poster">
@@ -167,11 +144,22 @@ submitButton.addEventListener("click", function(event) {
             <h4 class="hide has-background-grey light">Rating: ${movieRating}</h4>
         </div>
     </div>
-
    <img src="${moviePoster}" alt="${movieTitle} poster">
     <h3>${movieTitle}</h3>
     <p>Rating: ${movieRating}</p>
 
+
+// JS
+// Grab movies to choose from
+// Grab google info of that movie
+// Use google info to say where to watch (theater or stream)
+// Movie card information 
+// Use google maps api to find nearest location of theater
+// Update Movie card
+// Grab restaurants to choose from
+// Grab info on restaurant 
+// Use google maps api to find nearest location of restaurant
+// Randomizer
 */
 
 
