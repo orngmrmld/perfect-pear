@@ -7,7 +7,7 @@ const movieCard = document.querySelector(".movie-card");
 
 //hide the movie filters until zipcode is entered
 $(".filters").hide();
-$(".hide").hide();
+// $(".hide").hide();
 
 //initiates the map on webpage
 function initMap() {
@@ -73,17 +73,20 @@ async function generateRandomMovie() {
   const moviePoster = `${posterAPI}&i=${randomID}`;
   // Create movie card HTML
   const movieCardHTML = `
-  <div class="columns is-flex">
-    <img class="image is-69x69 column hide bd-notification is-info hide bd-notification is-info" src="${moviePoster}" alt="${movieTitle} poster">
-      <div class="columns is-mobile">
-        <div class="column">
-        <h3 class="hide ">${movieTitle}</h3>
-        <h4 class="hide bd-notification is-info">Rating: ${movieRating}</h4>
-        </div>
-        <div class="column is-flex"> 
-        <img class="image is-69x69 column hide bd-notification is-info hide bd-notification is-info" src="${moviePoster}" alt="${movieTitle} poster">
-        </div>
-      </div>
+  <div class="columns is-mobile">
+  
+    <div class="column">
+      <img src="${moviePoster}" alt="${movieTitle} poster">
+    </div>
+
+    <div class="column">
+      <h3>${movieTitle}</h3>
+      <h4>Rating: ${movieRating}</h4>
+    </div>
+
+    <div class="column">
+      <img src="${moviePoster}" alt="${movieTitle} poster"> 
+    </div>
   </div>
   `;
   // Update movie card with HTML
@@ -136,17 +139,8 @@ submitButton.addEventListener("click", function(event) {
     $(".zipDisplay").text("Error " + zip);
   }
 });
-   <div class="hide columns">
-      <img class="hide has-background-grey light" src="${moviePoster}" alt="${movieTitle} poster">
-        <div class="column">
-            <h3 class="hide has-background-grey light">${movieTitle}</h3>
-        <div class="columns is-mobile">
-            <h4 class="hide has-background-grey light">Rating: ${movieRating}</h4>
-        </div>
-    </div>
-   <img src="${moviePoster}" alt="${movieTitle} poster">
-    <h3>${movieTitle}</h3>
-    <p>Rating: ${movieRating}</p>
+
+---------------
 
 
 // JS
