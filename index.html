@@ -12,48 +12,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <style>
-        body {
-          background-image: 
-          url('assets/images/MoviePosterBackground.jpg')
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body class="darker-span">
-    <div>
-        <h1 class="has-text-centered">PERFECT PEAR!</h1>
-        <!--short description//call to action-->
-        <h4 class="has-text-centered p-5">Perfect Pear allows you and your significant other to choose a movie and food
-            without having to make any decisions!</h4>
-    </div>
+<body id="backgroundIMG">
+    <header class="column has-background-black has-text-right"> 
+        <a class=" material-symbols-rounded content" href="?reload">refresh</a>
+    </header>
 
     <main>
+        <div>
+            <h1 class="content has-text-centered">filmMatchMaker</h1>
+            <!--short description//call to action-->
+            <h4 class="content has-text-centered p-5 hideZip">Stop fighting with your partner or yourself on what to watch and let filmMatchMaker pick what to watch for you!</h4>
+        </div>
+ 
         <!--zipcode input-->
-        <form id="user-input">
+        <form id="user-input"class="content hideInput">
             <h5>Enter Zip Code Below</h5>
             <input type="text" placeholder="Ex: 94606" id="zipCode" maxlength="5" onKeyUp="validateInput()">
             <input type="submit" button id="submit" value="submit">
             <div id="msg"></div>
         </form>
 
-        <div class="columns">
-            <h3 class=" column zipDisplay has-text-centered mgb-medium"></h3>
+        <div class="column has-text-centered hideZip">
+            <h4 class="content has-text-centered is-inline-flex is-6 p-5 zipDisplay "></h4>
         </div>
 
         <!--filter buttons-->
-        <div class="filters">
-            <h4 class="has-text-centered">Please pick a mood selector or the random button!
-            </h4>
-        </div>
-        <div class="filters card-footer m-5 ">
-            <button class="randomBtn m-5 card-footer-item">Press to pick a movie</button>
+        <div class="filters has-text-centered">
+            <button class="content randomBtn mb-5">Press to pick a movie</button>
             <!-- <button class="cozyBtn m-5 card-footer-item">Cozy</button> -->
             <!-- <button class="adventureBtn m-5 card-footer-item">Adventure</button> -->
         </div>
 
         <!--movie card-->
-        <section class="container movie-card box columns is-12 card-column">
+        <section class="container movie-card box columns is-12 card-column hide">
             <h3 class="has-text-centered column">Movie Card</h3>
         </section>
 
@@ -62,26 +56,26 @@
             <h3>RESTAURANT</h3>
         </div> -->
 
-    </main>
-
-    <div class="pt-5">
-        <h4 class="has-text-centered">MAP or DIRECTIONS:</h4>
+    <div class="pt-5"> 
+        <h4 class="content has-text-centered hide">MAP or DIRECTIONS:</h4>
     </div>
     <!-- Google Map with markers -->
-    <div id="map"></div>
+    <div id="map" class="hide"></div>
+
+    </main>
 
     <footer>
-        <ul>
-            <li>Made by marc(us);</li>
+        <ul class="content has-text-white">
+            <li>filmMatchMaker();</li>
             <!-- <li>var marc.us = {marcus: marcus.value, eric: eric.value, gustavo: gustavo.value, sarah: sarah.value, jenni: jenni.value,}</li> -->
-            <li>
-                function marc(us) {
-                    marcus();
-                    eric();
-                    gustavo();
-                    sarah();
-                    jenni();
-                }
+            <li>function filmMatchMaker {
+                marcus: pm.maps.api.Marcer ({});
+                eric: zip.textContent("");
+                sarah: $("#css.js").on("click");
+                gustavo: ?apikey=fetch(`${movieAPI}${randomID}`);
+                jenni: css.val()trim();
+            }
+                
             </li>
                 <!-- <li>marcus: marcus.value,</li> -->
                 <!-- <li>eric: eric.value,</li> -->

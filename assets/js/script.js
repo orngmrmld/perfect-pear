@@ -33,9 +33,11 @@ $("#submit").on("click", function (event) {
   if (zip) {
     $(".zipDisplay").text("Zipcode: " + zip);
     $(".filters").show()
+    $(".hideInput").hide();
   } else {
     $(".zipDisplay").text("Sorry, please enter a zipcode");
     $(".filters").hide();
+    $(".hideZip").show();
   }
 });
 
@@ -51,7 +53,7 @@ function validateInput()
   let message = "";
   if (isUSAZipCode(zipCode)) 
   {
-    message = "Valid Zip Code";
+    message = "Valid Zip Code: #";
   } else {
     message = "Invalid Zip Code";
   }
@@ -72,15 +74,15 @@ async function generateRandomMovie() {
   // Create movie card HTML
   const movieCardHTML = `
   <div class="columns is-flex">
-  <img class="image is-70x70 column hide bd-notification is-info hide bd-notification is-info " src="${moviePoster}" alt="${movieTitle} poster">
+    <img class="image is-69x69 column hide bd-notification is-info hide bd-notification is-info" src="${moviePoster}" alt="${movieTitle} poster">
       <div class="columns is-mobile">
         <div class="column">
         <h3 class="hide ">${movieTitle}</h3>
+        </div>
         <div class="column">
         <h4 class="hide bd-notification is-info">Rating: ${movieRating}</h4>
         </div>
       </div>
-    </div>
   </div>
   `;
   // Update movie card with HTML
@@ -100,6 +102,7 @@ $(".randomBtn").on("click", function (event) {
   event.preventDefault();
   localStorage.setItem("filter", "random");
   generateRandomMovie();
+  $(".randomBtn").text("Press to pick another movie!");
   //restaurantRandom():
 })
 // Generator for cozy filter click functions, pairs with random restaurant locator
