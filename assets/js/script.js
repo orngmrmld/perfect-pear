@@ -1,3 +1,15 @@
+// JS
+// Grab movies to choose from
+// Grab google info of that movie
+// Use google info to say where to watch (theater or stream)
+// Movie card information 
+// Use google maps api to find nearest location of theater
+// Update Movie card
+// Grab restaurants to choose from
+// Grab info on restaurant 
+// Use google maps api to find nearest location of restaurant
+// Randomizer
+
 const posterAPI = "http://img.omdbapi.com/?apikey=84310bbd&";
 const movieAPI = "http://www.omdbapi.com/?apikey=84310bbd&i=";
 const apiKey = "84310bbd";
@@ -48,6 +60,7 @@ function isUSAZipCode(str)
 
 function validateInput() 
 {
+  preventDefault();
   console.log("validateInput");
   let zipCode = document.getElementById("zipCode").value;
   let message = "";
@@ -161,14 +174,3 @@ submitButton.addEventListener("click", function(event) {
 */
 
 
-// JS
-// Grab movies to choose from
-// Grab google info of that movie
-// Use google info to say where to watch (theater or stream)
-// Movie card information 
-// Use google maps api to find nearest location of theater
-// Update Movie card
-// Grab restaurants to choose from
-// Grab info on restaurant 
-// Use google maps api to find nearest location of restaurant
-// Randomizer
