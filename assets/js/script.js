@@ -7,7 +7,7 @@ const movieCard = document.querySelector(".movie-card");
 
 //hide the movie filters until zipcode is entered
 $(".filters").hide();
-// $(".hide").hide();
+$(".hide").hide();
 
 //initiates the map on webpage
 function initMap() {
