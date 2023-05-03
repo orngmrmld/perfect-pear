@@ -48,7 +48,7 @@ main {
 
 
 .movie-card {
-    background-color: white(83, 84, 96);
+    background-color: rgb(165, 165, 165);
     text-align: center;
     height: 300px;
     border-radius: 15px;
@@ -70,6 +70,7 @@ main {
     height: 400px;
     width: 100%;
     background-color: grey;
+    border-radius: 10px;
 }
 
 form {
@@ -119,6 +120,7 @@ h5 {
 #backgroundIMG {
     background-image: url("../images/MoviePosterBackground.jpg");
     background-size: cover;
+    background-size:contain;
     position: relative;
     /* filter: brightness(50%);  */
 }
