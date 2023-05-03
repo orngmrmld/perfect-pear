@@ -91,9 +91,10 @@ async function generateRandomMovie() {
       <div class="columns is-mobile">
         <div class="column">
         <h3 class="hide ">${movieTitle}</h3>
-        </div>
-        <div class="column">
         <h4 class="hide bd-notification is-info">Rating: ${movieRating}</h4>
+        </div>
+        <div class="column is-flex"> //using img as a place holder for food random pick
+        <img class="image is-69x69 column hide bd-notification is-info hide bd-notification is-info" src="${moviePoster}" alt="${movieTitle} poster">
         </div>
       </div>
   </div>
