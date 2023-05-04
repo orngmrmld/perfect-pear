@@ -53,7 +53,7 @@ function validateInput()
   let message = "";
   if (isUSAZipCode(zipCode)) 
   {
-    message = "Valid Zip Code: #";
+    message = "Valid Zip Code:";
   } else {
     message = "Invalid Zip Code";
   }
@@ -92,6 +92,10 @@ async function generateRandomMovie() {
   // Update movie card with HTML
   movieCard.innerHTML = movieCardHTML;
   $(".hide").show();
+}
+
+function randomFood() {
+  var = 
 }
 
 // Generator for random filter click functions, pairs with random restaurant locator

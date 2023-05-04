@@ -123,7 +123,7 @@ h5 {
     background-size: cover;
     background-size:contain;
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
     min-width: 1024px;
 }
 
