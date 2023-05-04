@@ -6,8 +6,10 @@ const movieIDs = ["tt0076759", "tt0080684", "tt0086190", "tt2488496", "tt0120915
 const movieCard = document.querySelector(".movie-card");
 
 //hide the movie filters until zipcode is entered
+
 $(".filters").hide();
 $(".hide").hide();
+
 
 
 
@@ -108,9 +110,9 @@ $("#randomBtn").on("click", function (event) {
   localStorage.setItem("filter", "random");
   generateRandomMovie();
   $("#randomBtn").text("Press to pick another movie!");
+
   // $(".hideComment").hide();
-  //restaurantRandom():
-})
+
 
 
 // Generator for cozy filter click functions, pairs with random restaurant locator
