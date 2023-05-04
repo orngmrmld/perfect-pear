@@ -94,10 +94,6 @@ async function generateRandomMovie() {
   $(".hide").show();
 }
 
-function randomFood() {
-  var = 
-}
-
 // Generator for random filter click functions, pairs with random restaurant locator
 $(".randomBtn").on("click", function (event) {
   event.preventDefault();
@@ -107,9 +103,6 @@ $(".randomBtn").on("click", function (event) {
   $(".hideComment").hide();
   //restaurantRandom():
 })
-
-
-
 
 
 // Generator for cozy filter click functions, pairs with random restaurant locator
