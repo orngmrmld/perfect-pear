@@ -92,7 +92,7 @@
         });
     
         google.maps.event.addListener(marker, 'click', function () {
-           
+            //localStorage.setItem("place-info",place.name)
             window.open(place.photos[0].getUrl(),"_blank");
             
         });
@@ -147,7 +147,7 @@
 
 
     <div class="pt-5"> 
-        <h3 class="content has-text-centered has-text-white hide">MAP:</h3>
+        <h3 class="content has-text-centered has-text-white hide">MAP:</h3><h3 id="place-info"></h3>
     </div>
     <!-- Google Map with markers -->
     <div id="map" class="hide"></div>

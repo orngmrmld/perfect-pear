@@ -10,61 +10,6 @@ const movieCard = document.querySelector(".movie-card");
 $(".filters").hide();
 $(".hide").hide();
 
-
-
-
-//initiates the map on webpage
-// function initMap() {
-//   var center = { lat: 51.507351, lng: -0.127758 };
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 10,
-//     center: center
-//   });
-//   var marker = new google.maps.Marker({
-//     position: center,
-//     map: map
-//   });
-// }
-
-//zipcode submit button saves to local storage and shows filter buttons, or displays error message
-// $("#submit").on("click", function (event) {
-//   event.preventDefault();
-//   let zip = $("#zipCode").val();
-//   localStorage.setItem("zip", zip);
-
-//   $("#zipCode").val("");
-
-//   if (zip) {
-//     $(".zipDisplay").text("Zipcode: " + zip);
-//     $(".filters").show()
-//     $(".hideInput").hide();
-//   } else {
-//     $(".zipDisplay").text("Sorry, please enter a zipcode");
-//     $(".filters").hide();
-//   }
-// });
-
-// function isUSAZipCode(str) 
-// {
-//   return /^\d{5}(-\d{4})?$/.test(str);
-// }
-
-// function validateInput() 
-// {
-//   preventDefault();
-//   console.log("validateInput");
-//   let zipCode = document.getElementById("zipCode").value;
-//   let message = "";
-//   if (isUSAZipCode(zipCode)) 
-//   {
-//     message = "Valid Zip Code:";
-//   } else {
-//     message = "Invalid Zip Code";
-//   }
-//   document.getElementById("msg").innerHTML = message;
-// }
-
-
 //function for the movie random generator
 // Define function to generate random movie
 async function generateRandomMovie() {
@@ -113,7 +58,62 @@ $("#randomBtn").on("click", function (event) {
 
   // $(".hideComment").hide();
 
+});
 
+
+
+//---------------
+
+
+// JS
+// Grab movies to choose from
+// Grab google info of that movie
+// Use google info to say where to watch (theater or stream)
+// Movie card information 
+// Use google maps api to find nearest location of theater
+// Update Movie card
+// Grab restaurants to choose from
+// Grab info on restaurant 
+// Use google maps api to find nearest location of restaurant
+// Randomizer
+//
+//zipcode submit button saves to local storage and shows filter buttons, or displays error message
+// $("#submit").on("click", function (event) {
+//   event.preventDefault();
+//   let zip = $("#zipCode").val();
+//   localStorage.setItem("zip", zip);
+
+//   $("#zipCode").val("");
+
+//   if (zip) {
+//     $(".zipDisplay").text("Zipcode: " + zip);
+//     $(".filters").show()
+//     $(".hideInput").hide();
+//   } else {
+//     $(".zipDisplay").text("Sorry, please enter a zipcode");
+//     $(".filters").hide();
+//   }
+// });
+
+// function isUSAZipCode(str) 
+// {
+//   return /^\d{5}(-\d{4})?$/.test(str);
+// }
+
+// function validateInput() 
+// {
+//   preventDefault();
+//   console.log("validateInput");
+//   let zipCode = document.getElementById("zipCode").value;
+//   let message = "";
+//   if (isUSAZipCode(zipCode)) 
+//   {
+//     message = "Valid Zip Code:";
+//   } else {
+//     message = "Invalid Zip Code";
+//   }
+//   document.getElementById("msg").innerHTML = message;
+// 
 
 // Generator for cozy filter click functions, pairs with random restaurant locator
 // $(".cozyBtn").on("click", function (event) {
@@ -146,21 +146,3 @@ submitButton.addEventListener("click", function(event) {
     $(".zipDisplay").text("Error " + zip);
   }
 });
-
----------------
-
-
-// JS
-// Grab movies to choose from
-// Grab google info of that movie
-// Use google info to say where to watch (theater or stream)
-// Movie card information 
-// Use google maps api to find nearest location of theater
-// Update Movie card
-// Grab restaurants to choose from
-// Grab info on restaurant 
-// Use google maps api to find nearest location of restaurant
-// Randomizer
-*/
-
-
