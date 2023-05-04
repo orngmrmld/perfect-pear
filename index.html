@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Pear</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,7 +109,7 @@
         <div>
             <h1 class="content has-text-centered">movieMatchMaker</h1>
             <!--short description//call to action-->
-            <h4 class="content has-text-centered p-5 hideComment">Stop fighting with your partner or yourself on what to watch and let movieMatchMaker pick a movie for you!</h4>
+            <h4 class="content has-text-centered p-5 has-text-white hideComment">Stop fighting with your partner or yourself on what to watch and let movieMatchMaker pick a movie for you!</h4>
         </div>
  
         <!--zipcode input-->
@@ -122,29 +121,33 @@
             <div id="msg"></div>
         </form>
 
+    
+        </div>
+
         <div class="column has-text-centered hideZip">
             <h4 class="content has-text-centered is-inline-flex is-6 p-5 zipDisplay "></h4>
         </div>
 
         <!--filter buttons-->
         <div class="filters has-text-centered">
-            <button class="content randomBtn mb-5" id="randomBtn">Press to pick a movie</button>
+
+            <button class="button is-warning content randomBtn mb-5" id="randomBtn">Press to pick another movie!</button>
+
             <!-- <button class="cozyBtn m-5 card-footer-item">Cozy</button> -->
             <!-- <button class="adventureBtn m-5 card-footer-item">Adventure</button> -->
         </div>
 
+
+
         <!--movie card-->
-        <section class="container movie-card box columns is-12 card-column hide">
-            <h3 class="has-text-centered column">Movie Card</h3>
+        <section class="content columns movie-card hide">
+          <div class="column is-half-desktop">Movie Card</div>
+          
         </section>
 
-        <!--restaurant card
-        <div class="box column is-offset-2 is-12 card-column restaurant-card">
-            <h3>RESTAURANT</h3>
-        </div> -->
 
     <div class="pt-5"> 
-        <h4 class="content has-text-centered hide">MAP or DIRECTIONS:</h4>
+        <h3 class="content has-text-centered has-text-white hide">MAP:</h3>
     </div>
     <!-- Google Map with markers -->
     <div id="map" class="hide"></div>
@@ -152,7 +155,7 @@
     </main>
 
     <footer>
-        <ul class="content has-text-white">
+        <ul class="content has-text-white has-text-centered">
             <li>filmMatchMaker();</li>
             <li>function filmMatchMaker {
                 marcus: pm.maps.api.Marker ({});

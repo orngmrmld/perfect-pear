@@ -6,8 +6,10 @@ const movieIDs = ["tt0076759", "tt0080684", "tt0086190", "tt2488496", "tt0120915
 const movieCard = document.querySelector(".movie-card");
 
 //hide the movie filters until zipcode is entered
-//$(".filters").hide();
-// $(".hide").hide();
+
+$(".filters").hide();
+$(".hide").hide();
+
 
 
 
@@ -78,15 +80,16 @@ async function generateRandomMovie() {
   const moviePoster = `${posterAPI}&i=${randomID}`;
   // Create movie card HTML
   const movieCardHTML = `
-  <div class="columns is-mobile">
+  <div class="content columns hide">
   
     <div class="column">
       <img src="${moviePoster}" alt="${movieTitle} poster">
     </div>
 
     <div class="column">
-      <h3>${movieTitle}</h3>
-      <h4>Rating: ${movieRating}</h4>
+      <h2 class="has-text-white">${movieTitle}</h2>
+      <h4 class="has-text-white">Rating: ${movieRating}</h4>
+      <h2 class="has-text-white">HERE IS YOUR SNACK MATCH ---><h2>
     </div>
 
     <div class="column">
@@ -96,7 +99,8 @@ async function generateRandomMovie() {
   `;
   // Update movie card with HTML
   movieCard.innerHTML = movieCardHTML;
-  // $(".hide").show();
+  $(".filters").show();
+  $(".hide").show();
 }
 
 // Generator for random filter click functions, pairs with random restaurant locator
@@ -106,9 +110,9 @@ $("#randomBtn").on("click", function (event) {
   localStorage.setItem("filter", "random");
   generateRandomMovie();
   $("#randomBtn").text("Press to pick another movie!");
-  $(".hideComment").hide();
-  //restaurantRandom():
-})
+
+  // $(".hideComment").hide();
+
 
 
 // Generator for cozy filter click functions, pairs with random restaurant locator
