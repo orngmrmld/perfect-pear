@@ -47,6 +47,7 @@
     
         google.maps.event.addListener(autocomplete,'place_changed',() =>{
           var place = autocomplete.getPlace();
+          generateRandomMovie();
           map.setZoom(17);
           console.log(place);
           console.log(place.photos[0].getUrl());
