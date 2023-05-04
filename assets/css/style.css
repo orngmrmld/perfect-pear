@@ -22,11 +22,14 @@ h1 {
 }
 
 h3 {
-    color: rgb(64, 66, 22);
+    color: white;
     font-weight: bold;
 }
 
 h4 {
+    display:flex;
+    justify-content: center;
+
     color: white(243, 245, 176, 0.939);
     font-weight: 900;
     border-radius: 10px;
@@ -49,18 +52,17 @@ main {
 
 
 .movie-card {
-    background-color: rgb(165, 165, 165);
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    width: 100%;
     height: 350px;
+    padding: 50px;
     border-radius: 15px;
+    backdrop-filter: blur(2px);
+
 }
 
-.restaurant-card {
-    background-color: rgba(128, 233, 207, 0.265);
-    text-align: center;
-    height: 300px;
-    border-radius: 15px;
-}
 
 .user-input {
     text-align: center;
