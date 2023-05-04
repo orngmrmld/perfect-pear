@@ -145,4 +145,5 @@ submitButton.addEventListener("click", function(event) {
   } else {
     $(".zipDisplay").text("Error " + zip);
   }
-});
+})
+*/
