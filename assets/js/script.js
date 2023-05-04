@@ -1,5 +1,5 @@
-const posterAPI = "http://img.omdbapi.com/?apikey=84310bbd&";
-const movieAPI = "http://www.omdbapi.com/?apikey=84310bbd&i=";
+const posterAPI = "https://img.omdbapi.com/?apikey=84310bbd&";
+const movieAPI = "https://www.omdbapi.com/?apikey=84310bbd&i=";
 const apiKey = "84310bbd";
 const movieIDs = ["tt0076759", "tt0080684", "tt0086190", "tt2488496", "tt0120915", "tt0121766", "tt0121765", "tt3748528", "tt2527336", "tt2527338"];
 // Get HTML elements
