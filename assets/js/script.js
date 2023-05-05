@@ -72,9 +72,9 @@ $("#randomBtn").on("click", function (event) {
   generateRandomMovie();
   $("#randomBtn").text("Press to pick another movie!");
 });
-  // $(".hideComment").hide();
 
-});
+
+
 
 
 
