@@ -17,4 +17,4 @@ So that I can save time deciding on what movie to watch & dinner to eat.
 https://orngmrmld.github.io/perfect-pear/
 
 ## Mockup
-![screenshot](   )
+![screen_shot_2023-05-04_at_5 33 14_pm](https://user-images.githubusercontent.com/127569177/236359504-12342038-a68f-47c4-adca-fe4c1845bc30.png)
