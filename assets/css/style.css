@@ -129,6 +129,10 @@ h5 {
     min-width: 1024px;
 }
 
+.titleIMG {
+    background-size: 50%;
+}
+
 .content {
     position: relative;
 }
