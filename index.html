@@ -24,7 +24,7 @@
     <script >
         var maps;
         var services;
-     
+
         function initialize(){
         var paso = new google.maps.LatLng(35.640556,-120.680008);
     
@@ -46,6 +46,7 @@
           var place = autocomplete.getPlace();
           generateRandomMovie();
           map.setZoom(17);
+          generateRandomMovie();
           console.log(place);
           console.log(place.photos[0].getUrl());
     
@@ -55,8 +56,8 @@
             map.setCenter(place.geometry.location);
             map.setZoom(17);
           }
-          marker.setPosition(place.geometry.location)
-          marker.setVisible(true)
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
      
           let request = {
           location: place.geometry.location,
@@ -66,7 +67,7 @@
     
           service = new google.maps.places.PlacesService(map);
           service.nearbySearch(request,callback);
-        })    
+        });    
     }
     
       function callback(results, status){     
@@ -84,7 +85,9 @@
           position: place.geometry.location
         });
     
+
         google.maps.event.addListener(marker, 'click', function () {      
+            //localStorage.setItem("place-info",place.name)
             window.open(place.photos[0].getUrl(),"_blank");
         });
       }
@@ -138,7 +141,7 @@
 
 
     <div class="pt-5"> 
-        <h3 class="content has-text-centered has-text-white hide">MAP:</h3>
+        <h3 class="content has-text-centered has-text-white hide">MAP:</h3><h3 id="place-info"></h3>
     </div>
     <!-- Google Map with markers -->
     <div id="map" class="hide"></div>
