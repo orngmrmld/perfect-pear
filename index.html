@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXoe4FUK0t3O6Ip1gLJaxYPF4f75WOud0&libraries=places"></script>
 
@@ -24,15 +24,13 @@
     <script >
         var maps;
         var services;
-        
-    
+
         function initialize(){
         var paso = new google.maps.LatLng(35.640556,-120.680008);
     
         map = new google.maps.Map(document.getElementById('map'),{
           center: paso,
-          zoom: 15
-    
+          zoom: 15  
         });
     
         var input = document.getElementById('searchTextField');
@@ -58,36 +56,27 @@
             map.setCenter(place.geometry.location);
             map.setZoom(17);
           }
-          marker.setPosition(place.geometry.location)
-          marker.setVisible(true)
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
      
           let request = {
           location: place.geometry.location,
           radius: '5000',
-          type: ["movie_theater"]
-        }
+          type: "movie_theater"
+          }
     
-        service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request,callback);
-        })
-    
-        var infowindow =  new google.maps.InfoWindow({
-		content: place.name,
-		map: map,
-		position: homeLatlng
-	});
-    
+          service = new google.maps.places.PlacesService(map);
+          service.nearbySearch(request,callback);
+        });    
     }
     
-      function callback(results, status){
-        
+      function callback(results, status){     
           if (status== google.maps.places.PlacesServiceStatus.OK){
             for(var i =0;i<results.length;i++){
               var place = results[i];
               createMarker(results[i]);
             }
-          }
-    
+          }    
       }
     
       function createMarker(place) {
@@ -96,27 +85,26 @@
           position: place.geometry.location
         });
     
-        google.maps.event.addListener(marker, 'click', function () {
+
+        google.maps.event.addListener(marker, 'click', function () {      
             //localStorage.setItem("place-info",place.name)
             window.open(place.photos[0].getUrl(),"_blank");
-            
         });
-    
-
       }
-    
-    
-
-    
-    
     </script>
 
     <main>
-        <div>
-            <h1 class="content has-text-centered">movieMatchMaker</h1>
+      <div>
+       <h1 class="content has-text-centered">movieMatchMaker</h1>
+        <!-- <div class="columns">
+          <div class="column is-8 has-text-centered">
+            <img class="content titleIMG" src="assets/images/logo.png" alt="movieMatchMaker title"/>
+          </div> -->
+          
+      <div>
             <!--short description//call to action-->
-            <h4 class="content has-text-centered p-5 has-text-white hideComment">Stop fighting with your partner or yourself on what to watch and let movieMatchMaker pick a movie for you!</h4>
-        </div>
+        <h4 class="content has-text-centered p-5 has-text-white hideComment">Stop fighting with your partner or yourself on what to watch and let movieMatchMaker pick a movie for you!</h4>
+      </div>
  
         <!--zipcode input-->
         <form id="user-input"class="content hideInput">
@@ -162,8 +150,8 @@
 
     <footer>
         <ul class="content has-text-white has-text-centered">
-            <li>filmMatchMaker();</li>
-            <li>function filmMatchMaker {
+            <li>movieMatchMaker();</li>
+            <li>function movieMatchMaker {
                 marcus: pm.maps.api.Marker ({});
                 jenni: css.val()trim();
             </li>
